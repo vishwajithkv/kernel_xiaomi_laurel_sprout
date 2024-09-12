@@ -623,7 +623,7 @@ static struct ctl_table ipv4_table[] = {
 	},
 	{
 		.procname	= "tcp_early_retrans",
-		.data		= &sysctl_tcp_early_retrans,
+		.data		= &init_net.ipv4.sysctl_tcp_early_retrans,
 		.maxlen		= sizeof(int),
 		.mode		= 0644,
 		.proc_handler	= proc_dointvec_minmax,
